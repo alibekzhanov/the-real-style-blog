@@ -1,0 +1,64 @@
+/* Сброс стилей для ссылок */
+a {
+    text-decoration: none; /* Убираем подчеркивание */
+    color: inherit; /* Устанавливаем цвет ссылки таким же, как у родительского элемента */
+}
+
+.other-pages {
+    position: fixed; /* Закрепляем меню */
+    top: 100px; /* Располагаем его сразу под заголовком */
+    left: 0; /* Выравниваем меню справа */
+
+    width: 100px; /* Устанавливаем фиксированную ширину */
+
+    /* отступы сбоку: */
+    padding-left: 150px; /* отступ с лева */
+
+    /* Вертикальное выравнивание ссылок */
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Отступ между ссылками */
+}
+
+/* Стили для ссылок */
+.other-pages a {
+    /* шрифт - Arsenal SC*/
+    /* 4 styles:
+        Regular 400
+        Bold 700
+        Regular 400 Italic
+        Bold 700 Italic */
+    font-family: 'Arsenal SC', sans-serif;;
+    font-size: 15px; /* Размер шрифта */
+    font-weight: 400; /* Regular */
+
+    color: #000; /* Цвет текста */
+    padding: 10px 0; /* Отступы внутри ссылок */
+    position: relative; /* Для позиционирования псевдоэлемента */
+    transition: all 0.3s ease; /* Плавный переход для анимации */
+    width: fit-content; /* Подгоняем ширину под контент */
+}
+/* Псевдоэлемент для анимации нижней границы */
+.other-pages a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 0;
+    background-color: #666666; /* Цвет линии */
+    transition: width 0.3s ease, left 0.3s ease; /* Плавный переход для анимации */
+}
+/* Анимация при наведении */
+.other-pages a:hover::after {
+    width: 100%; /* Увеличиваем ширину линии при наведении */
+    left: 0; /* Линия растягивается слева направо */
+}
+
+
+
+/* цвет выделения текста на черный при выделении пользователем */
+::selection {
+    background-color: #000000; /* Устанавливаем черный цвет фона для выделения */
+    color: #ffffff; /* Устанавливаем белый цвет текста в выделенной области */
+}

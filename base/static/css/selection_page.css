@@ -1,0 +1,91 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: "Arial", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Убираем прокрутку */
+}
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* Помещаем фон под основным содержимым */
+}
+.background .background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Обрезаем изображение, чтобы оно заполнило весь контейнер */
+}
+
+
+
+.selection-container {
+  display: flex; /* Включаем flexbox-разметку */
+  flex-direction: column; /* Размещаем элементы по вертикали */
+  align-items: center; /* Центрируем элементы по горизонтали */
+  position: relative;
+  background-color: rgba(240, 240, 240, 0.9); /* Полупрозрачный фон */
+  padding: 40px;
+  text-align: center;
+  z-index: 1; /* Помещаем контейнер над фоном */
+  color: #000000; /* Цвет текста */
+}
+.selection-container .logo {
+  height: 20px;
+  margin-bottom: 50px;
+}
+.selection-container h1 {
+  /* сброс отступов */
+  margin: 0;
+  /* шрифт */
+  font-family: "Marcellus", sans-serif;
+  font-size: 24px;
+  font-weight: 400; /* Regular */
+  color: #000000;
+  padding-bottom: 20px;
+}
+.selection-container p {
+  /* сброс отступов */
+  margin: 0;
+  /* шрифт */
+  font-family: "Athiti", sans-serif;
+  font-size: 13px;
+  font-weight: 400; /* Regular */
+  color: #000000;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+.selection-container .button-group {
+  display: flex;
+  flex-direction: column;
+}
+.selection-container .button-group .btn {
+  background-color: #000000;
+  color: #f0f0f0;
+  text-decoration: none;
+  font-family: "Athiti", sans-serif;
+  font-size: 16px;
+  font-weight: 400; /* Regular */
+  padding: 10px 30px;
+  transition: background-color 0.3s ease;
+}
+.selection-container .button-group .btn:hover {
+  background-color: #333333;
+}
+
+
+
+
+
+/* цвет выделения текста на черный при выделении пользователем */
+::selection {
+  background-color: #000000; /* Устанавливаем черный цвет фона для выделения */
+  color: #ffffff; /* Устанавливаем белый цвет текста в выделенной области */
+}

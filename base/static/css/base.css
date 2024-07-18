@@ -1,0 +1,5 @@
+/* base.css */
+@import url('menu.css');
+@import url('article.css');
+@import url('footer.css');
+/* ... другие общие стили */

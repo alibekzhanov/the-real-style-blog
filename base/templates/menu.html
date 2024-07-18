@@ -1,0 +1,10 @@
+<!-- menu.html - содержит только содержимое меню -->
+
+{% load static %} <!-- Загружаем тег static -->
+
+<div class="other-pages">
+    {% for topic in topics %}
+        <a href="{% url 'page' topic.url %}"> {{ topic.name }}</a>
+    {% endfor %}
+</div>
+

@@ -1,0 +1,45 @@
+{% load static %}
+
+<head>
+    <!-- Arsenal SC -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- Athiti -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Athiti:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/header.css' %}">
+</head>
+
+<body>
+    <div class="content-wrapper">
+        <div class="header">
+            <a href="{% url 'home' %}">
+                <img class="logo" src="{% static 'vectors/trsg_logo.svg' %}" alt="trsg logo">
+            </a>
+
+            <div class="navbar-header__access">
+                <!-- search icon -->
+                <div class="icon search_icon">
+                    <img class="search_vector" src="{% static 'vectors/search_icon.svg' %}" alt="search_icon">
+                </div>
+    
+                <!-- user icon -->
+                <a href="{% url 'selection_page' %}">
+                    <div class="icon user_icon">
+                        <img class="user_vector" src="{% static 'vectors/user_icon.svg' %}" alt="user_icon">
+                    </div>
+                </a>
+    
+                <!-- favorites icon -->
+                <div class="icon favorites_icon">
+                    <img class="favorites_vector" src="{% static 'vectors/favorites_icon.svg' %}" alt="favorites_icon">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

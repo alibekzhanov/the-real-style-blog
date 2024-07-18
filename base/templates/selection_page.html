@@ -1,0 +1,49 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/selection_page.css' %}">
+
+    <!-- Marcellus -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+
+    <!-- Athiti -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Athiti:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- background -->
+    <div class="background">
+        <img class="background-image" src="{% static 'images/16-07_2024_riga_1_style_01_HP_Brunello_Cucinelli.jpeg' %}" alt="1">
+        <img class="background-image" src="{% static '16-07_2024_riga_1_style_01_HP_DONNA_Brunello_Cucinelli' %}" alt="2">
+        <img class="background-image" src="{% static '2' %}" alt="3">
+        <img class="background-image" src="{% static '3' %}" alt="4">
+        <img class="background-image" src="{% static '4' %}" alt="5">
+    </div>
+
+    <!-- console -->
+    <div class="selection-container">
+        <!-- logo -->
+        <img class="logo" src="{% static 'vectors/trsg_logo.svg' %}" alt="trsg logo">
+
+        <!-- title -->
+        <h1>Choose an Option</h1>
+
+        <!-- buttons -->
+        <div class="button-group">
+            <!-- sign in button -->
+            <a href="{% url 'login' %}" class="btn">SIGN IN</a>
+
+            <p>Don't have an account yet? So, create it!</p>
+
+            <!-- create account button -->
+            <a href="{% url 'register' %}" class="btn">CREATE ACCOUNT</a>
+        </div>
+    </div>
+</body>
+</html>

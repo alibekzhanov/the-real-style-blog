@@ -1,0 +1,124 @@
+.footer-block {
+    margin-top: 100px;
+}
+.footer-block .about-us {
+    background-color: black;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрирует содержимое по горизонтали */
+    justify-content: center; /* Центрирует содержимое по вертикали */
+    text-align: center; /* Центрирует текст */
+}  
+.footer-block .about-us .node_icon {
+    width: 150px;
+    padding-bottom: 20px; /* Добавляем отступ снизу, чтобы иконка не прилипала к тексту */
+} 
+.footer-block .about-us p {
+    font-family: "Marcellus", sans-serif;
+    font-size: 16px;
+    font-weight: 400; /* Regular */
+    color: #f0f0f0;
+    padding: 10px 0; /* Добавляем вертикальные отступы */
+    position: relative; /* Для псевдоэлемента */
+}
+
+
+
+/* join-now */
+.footer-block .about-us .join_now_button {
+    padding-top: 30px;
+}
+.footer-block .about-us .join_now_button .btn {
+    background-color: #f0f0f0;
+    color: #000000;
+    text-decoration: none;
+    font-family: "Athiti", sans-serif;
+    font-size: 16px;
+    font-weight: 400; /* Regular */
+    padding: 10px 30px;
+    transition: background-color 0.3s ease;
+}
+.footer-block .about-us .join_now_button .btn:hover {
+    background-color: #333333;
+}
+
+
+
+/* continuous-scroll */
+.footer-block .about-us .continuous-scroll {
+    padding-top: 50px;
+    overflow: hidden;
+    width: 100%;
+}
+.footer-block .about-us .continuous-scroll .scroll-track {
+    display: flex;
+    animation: continuous-scroll 10s linear infinite;
+}
+.footer-block .about-us .continuous-scroll .scroll-track .brand_logo {
+    width: 200px;
+    margin-right: 20px;
+}
+@keyframes continuous-scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-100px * 13));
+    }
+}
+
+
+
+/* post-footer */
+.footer-block .post-footer {
+    padding: 50px;
+    display: flex; /* Сохраняем контейнер flexbox */
+    flex-direction: column; /* Изменяем на вертикальное расположение */
+    align-items: center; /* Сохраняем центрирование по горизонтали */
+}
+.footer-block .post-footer h1 {
+    /* сброс отступов */
+    margin: 0;
+    /* шрифт */
+    font-family: "Marcellus", sans-serif;
+    font-size: 24px;
+    font-weight: 400; /* Regular */
+    color: #000000;
+
+    text-align: center;
+    padding-bottom: 10px;
+}
+.footer-block .post-footer p {
+    /* сброс отступов */
+    margin: 0;
+    /* шрифт */
+    font-family: "Marcellus", sans-serif;
+    font-size: 16px;
+    font-weight: 400; /* Regular */
+    color: #000000;
+
+    text-align: center;
+    padding-bottom: 10px;
+}
+.footer-block .post-footer p2 {
+    /* сброс отступов */
+    margin: 0;
+    /* шрифт */
+    font-family: "Athiti", sans-serif;
+    font-size: 13px;
+    font-weight: 400; /* Regular */
+    color: #000000;
+
+    text-align: center;
+    padding-top: 50px;
+}
+
+
+
+
+/* цвет выделения текста на черный при выделении пользователем */
+::selection {
+    background-color: #000000; /* Устанавливаем черный цвет фона для выделения */
+    color: #ffffff; /* Устанавливаем белый цвет текста в выделенной области */
+}
