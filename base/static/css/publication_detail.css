@@ -1,0 +1,119 @@
+/* Центрирование .article с использованием flexbox */
+.article-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 100px;
+}
+
+.article-wrapper .article {
+    margin-left: 300px;
+    margin-right: 150px;
+}
+
+/* image */
+.article-wrapper .article .image-frame {
+    position: relative;
+    width: 100%;
+    height: 300px; 
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.article-wrapper .article .image-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1s ease;
+}
+.article-wrapper .article .image-frame:hover img {
+    transform: scale(1.1);
+}
+.image-frame::after,
+.image-frame::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.image-frame::after {
+    background: linear-gradient(to top, white 0%, rgba(255, 255, 255, 0) 50%);
+    mix-blend-mode: hard-light;
+}
+.image-frame::before {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.3) 0%, transparent 100%);
+    mix-blend-mode: normal;
+}
+
+/* шрифт - Marcellus */
+.article .title h1 {
+    font-family: "Marcellus", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    margin-top: 10px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+.article .title h1:hover {
+    color: #888888;
+}
+.article .title h1::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #888888, transparent);
+    margin-top: 5px;
+    animation: moveGradient 3s ease-in-out infinite;
+}
+
+
+/* Чтобы сделать первую букву заглавной и большой, а остальной текст обтекал её */
+/* Стили для первой буквы */
+.content .initial-cap {
+    float: left;
+    font-size: 4em; /* Увеличьте размер шрифта, как требуется */
+    line-height: 1;
+    padding-right: 10px; /* Добавьте отступ справа для эффекта обтекания */
+    padding-top: 5px; /* Добавьте отступ сверху для вертикального выравнивания */
+    font-family: "Marcellus", sans-serif; /* Задайте желаемый шрифт */
+}
+
+/* шрифт Athiti */
+.article .content p {
+    font-family: "Athiti", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.article .publish_date p {
+    font-family: "Athiti", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+/* стили для кнопки read now */
+.button-group .btn {
+    background-color: #000000;
+    color: #f0f0f0;
+    text-decoration: none;
+    font-family: "Athiti", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 10px 30px;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    margin-top: 10px;
+}
+.button-group .btn:hover {
+    background-color: #333333;
+}
+
+/* цвет выделения текста на черный при выделении пользователем */
+::selection {
+    background-color: #000000;
+    color: #ffffff;
+}

@@ -1,6 +1,6 @@
 <!-- article.html - содержит только содержимое публикаций -->
 
-{% load static %} <!-- Загружаем тег static -->
+{% load static %}
 
 {% for publication in publications %}
     <div class="article-wrapper">
@@ -19,12 +19,17 @@
 
             <!-- content -->
             <div class="content">
-                <p>{{ publication.content }}</p>
+                <p>{{ publication.content|truncatewords:150 }}</p> <!-- Ограничиваем количество слов -->
             </div>
 
             <!-- publish date -->
             <div class="publish_date">
                 <p>{{ publication.publish_date }}</p>
+            </div>
+            
+            <!-- read now button -->
+            <div class="button-group">
+                <a href="{% url 'read_publication' publication.id %}" class="btn">READ NOW</a>
             </div>
         </div>
     </div>

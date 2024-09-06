@@ -1,0 +1,43 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/identity/login.css' %}">
+
+    <!-- Marcellus -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+
+    <!-- Athiti -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Athiti:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- background -->
+    <div class="background">
+        <img class="background-image" src="{% static 'images/4.jpeg' %}">
+    </div>
+
+    <!-- console -->
+    <div class="selection-container">
+        <!-- logo -->
+        <img class="logo" src="{% static 'vectors/trsg_logo.svg' %}" alt="trsg logo">
+
+        <!-- title -->
+        <h1>Login</h1>
+
+        <!-- form -->
+        <form method="post" class="auth-form">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn">Login</button>
+        </form>
+
+        <p>Don't have an account yet? <a href="{% url 'register' %}">Create one</a></p>
+    </div>
+</body>
+</html>

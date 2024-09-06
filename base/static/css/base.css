@@ -3,3 +3,40 @@
 @import url('article.css');
 @import url('footer.css');
 /* ... другие общие стили */
+
+/* Стили для контейнера кнопки "Загрузить больше" */
+#load-more-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px; /* Отступ сверху для визуального разделения */
+}
+/* Стили для кнопки "Загрузить больше" */
+#load-more-container  #load-more {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+  
+    color: #000000; /* Черный текст */
+    font-family: "Athiti", sans-serif; /* Шрифт Athiti */
+    font-size: 16px; /* Размер шрифта */
+    cursor: pointer; /* Курсор-указатель при наведении */
+    transition: color 0.3s ease; /* Эффект плавного изменения цвета */
+    display: inline-block; /* Отображать как встроенный элемент */
+    width: fit-content; /* Ширина подстраивается под содержимое */
+    text-align: center; /* Выравнивание текста по центру */
+    position: relative; /* Для позиционирования подчеркивания */
+}
+#load-more-container  #load-more::after {
+    content: ''; /* Пустое содержимое для подчеркивания */
+    position: absolute; /* Абсолютное позиционирование */
+    left: 0; /* Начало слева */
+    bottom: 0; /* Положение снизу */
+    height: 1px; /* Высота подчеркивания */
+    width: 0; /* Начальная ширина */
+    background-color: #666666; /* Цвет подчеркивания */
+    transition: width 0.3s ease; /* Плавный переход для анимации */
+}
+#load-more-container  #load-more:hover::after {
+    width: 100%; /* Расширение подчеркивания при наведении */
+}

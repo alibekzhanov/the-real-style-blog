@@ -1,0 +1,29 @@
+{% extends "publication_detail/base_detail.html" %}
+
+{% block content %}
+    <div class="article-wrapper">
+        <div class="article">
+            <!-- image -->
+            {% if publication.image %}
+            <div class="image-frame">
+                <img src="{{ publication.image.url }}" alt="{{ publication.title }}">
+            </div>
+            {% endif %}
+            
+            <!-- title -->
+            <div class="title">
+                <h1>{{ publication.title }}</h1>
+            </div>
+
+            <!-- content -->
+            <div class="content">
+                <p><span class="initial-cap">{{ publication.content|slice:":1" }}</span>{{ publication.content|slice:"1:" }}</p>
+            </div>
+
+            <!-- publish date -->
+            <div class="publish_date">
+                <p>{{ publication.publish_date }}</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

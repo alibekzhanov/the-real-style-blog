@@ -13,6 +13,8 @@
 
     <!-- css -->
     <link rel="stylesheet" type="text/css" href="{% static 'css/header.css' %}">
+    <!-- JavaScript -->
+    <script src="{% static 'js/search.js' %}"></script>
 </head>
 
 <body>
@@ -24,7 +26,7 @@
 
             <div class="navbar-header__access">
                 <!-- search icon -->
-                <div class="icon search_icon">
+                <div class="icon search_icon" onclick="toggleSearchBar()">
                     <img class="search_vector" src="{% static 'vectors/search_icon.svg' %}" alt="search_icon">
                 </div>
     
@@ -40,6 +42,14 @@
                     <img class="favorites_vector" src="{% static 'vectors/favorites_icon.svg' %}" alt="favorites_icon">
                 </div>
             </div>
+        </div>
+
+        <!-- Скрытая форма поиска -->
+        <div id="search-bar" class="search-bar" style="display: none;">
+            <form action="{% url 'search' %}" method="GET">
+                <input type="text" name="q" placeholder="Search..." required>
+                <button type="submit">Search</button>
+            </form>
         </div>
     </div>
 </body>

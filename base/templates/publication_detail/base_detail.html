@@ -1,0 +1,43 @@
+<!-- Этот файл служит основным шаблоном для страниц с детальной информацией о публикациях(publication_detail.html).
+Он включает в себя общие элементы страницы,
+такие как заголовок, меню и подвал, и имеет место для отображения 
+содержимого конкретной публикации. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    
+    <!-- Подключение шрифтов -->
+    <!-- Arsenal SC -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- Marcellus -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+
+    <!-- Athiti -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Athiti:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Подключение CSS файлов -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/publication_detail.css' %}">
+</head>
+<body>
+    <!-- Включение заголовка -->
+    {% include 'header.html' %}
+    <!-- Включение меню -->
+    {% include 'menu.html' %}
+    <main>
+        <!-- Блок для контента публикации -->
+        {% block content %}{% endblock %}
+    </main>
+    <!-- Включение подвала -->
+    {% include 'footer.html' %}
+</body>
+</html>

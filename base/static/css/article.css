@@ -4,10 +4,9 @@
     justify-content:flex-start; /* Центрирование по горизонтали */
 
     margin-top: 100px;
-    
 }
 
-.article {
+.article-wrapper .article {
     /* Убираем фиксированные отступы, так как центрирование будет осуществляться flexbox */
     margin-left: 300px;
     margin-right: 150px;
@@ -15,23 +14,23 @@
 
 
 /* image */
-.image-frame {
+.article-wrapper .article .image-frame {
     position: relative; /* Добавьте position: relative */
     width: 100%;
-    height: 200px; 
+    height: 300px; 
     overflow: hidden; /* Скрывает части изображения, которые не помещаются в блок */
     display: flex; /* Переводит блок в режим flexbox, позволяя центрировать элементы внутри него */
     align-items: center; /* Центрирует элементы по вертикальной оси */
     justify-content: center; /* Центрирует элементы по горизонтальной оси */
 }
-.image-frame img {
+.article-wrapper .article .image-frame img {
     width: 100%; /* Заставляет изображение занимать всю ширину блока */
     height: 100%; /* Заставляет изображение занимать всю высоту блока */
     object-fit: cover; /* Растягивает изображение до тех пор, пока оно не заполнит все доступное пространство, сохраняя при этом его пропорции. */
 
     transition: transform 1s ease; /* Добавляем transition для плавного изменения */
 }
-.image-frame:hover img {
+.article-wrapper .article .image-frame:hover img {
     transform: scale(1.1); /* Увеличиваем масштаб при наведении только для изображения */
 }
 .image-frame::after,
@@ -44,7 +43,7 @@
     height: 100%;
 }
 .image-frame::after {
-    background: linear-gradient(to top, white 0%, rgba(255, 255, 255, 0) 100%); /* Градиент от белого к прозрачному */
+    background: linear-gradient(to top, white 0%, rgba(255, 255, 255, 0) 50%); /* Градиент от белого к прозрачному */
     mix-blend-mode: hard-light;
 }
 .image-frame::before {
@@ -101,6 +100,23 @@
     font-weight: 400; /* Regular */
 }
 
+
+/* стили для кнопки read now */
+.button-group .btn {
+    background-color: #000000;
+    color: #f0f0f0;
+    text-decoration: none;
+    font-family: "Athiti", sans-serif;
+    font-size: 16px;
+    font-weight: 400; /* Regular */
+    padding: 10px 30px;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    margin-top: 10px; /* Отступ сверху */
+}
+.button-group .btn:hover {
+    background-color: #333333;
+}
 
 
 /* цвет выделения текста на черный при выделении пользователем */

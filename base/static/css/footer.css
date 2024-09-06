@@ -3,7 +3,10 @@
 }
 .footer-block .about-us {
     background-color: black;
-    padding: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 150px;
+    padding-right: 150px;
     display: flex;
     flex-direction: column;
     align-items: center; /* Центрирует содержимое по горизонтали */
@@ -57,7 +60,6 @@
 }
 .footer-block .about-us .continuous-scroll .scroll-track .brand_logo {
     width: 200px;
-    margin-right: 20px;
 }
 @keyframes continuous-scroll {
     0% {
@@ -72,7 +74,10 @@
 
 /* post-footer */
 .footer-block .post-footer {
-    padding: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 150px;
+    padding-right: 150px;
     display: flex; /* Сохраняем контейнер flexbox */
     flex-direction: column; /* Изменяем на вертикальное расположение */
     align-items: center; /* Сохраняем центрирование по горизонтали */
